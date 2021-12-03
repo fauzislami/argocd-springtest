@@ -22,7 +22,7 @@ spec:
         app: springtest
     spec:
       containers:
-      - image: islamifauzi/springtest:1
+      - image: islamifauzi/springtest:1.1
         imagePullPolicy: IfNotPresent
         name: springtest
         ports:
