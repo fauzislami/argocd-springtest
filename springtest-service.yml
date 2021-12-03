@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: springtest
+  name: springtest
+  namespace: randomapps
+spec:
+  ports:
+  - name: port-1
+    port: 9000
+    protocol: TCP
+    targetPort: 9000
+  - name: port-2
+    port: 9001
+    protocol: TCP
+    targetPort: 9001
+  selector:
+    app: springtest
+  sessionAffinity: None
+  type: LoadBalancer
+status:
